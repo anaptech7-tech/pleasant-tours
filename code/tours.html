@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pleasant Tours — Explore with Us</title>
+  <meta name="description" content="Pleasant Tours - 60 international tours, responsive catalog." />
+  <link rel="stylesheet" href="./index.html">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Optional site stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pleasant Tours — Explore with Us</title>
+  <meta name="description" content="Pleasant Tours - 60 international tours, responsive catalog." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Optional site stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{
+      --navy:#001f3f;
+      --accent:#0d6efd;
+    }
+    body{
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      padding-top: 65px; /* offset for fixed navbar */
+      background:#f8fafc;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background: var(--navy) !important;
+    }
+    .navbar .nav-link{
+      color:#fff !important;
+    }
+    .navbar .nav-link:hover{
+      color: #dbeafe !important;
+    }
+    .navbar-brand img{ height:40px; width:auto; }
+
+    /* HERO */
+    .hero {
+      height: 87vh;
+      background: url('https://www.pexels.com/download/video/3094026/') center/cover no-repeat;
+    }
+    .hero-overlay{
+      background: rgba(0,0,0,0.45);
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align:center;
+      max-width:1100px;
+    }
+    .hero .btn-primary{ background: var(--navy); border:none; }
+
+    /* CATALOG */
+    .category-title{ margin: 2.5rem 0 1rem; font-weight:700; }
+    .card-img-top{ height:200px; object-fit:cover; }
+    .card{ transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(13, 110, 253, .12); }
+
+    .badge-price{ background: #0f5132; color: #fff; padding: .25rem .6rem; border-radius: .5rem; font-weight:700; }
+
+    footer{ background:#0b1220; color:#fff; padding:2rem 0; margin-top:3rem; }
+    footer a{ color: #bcd4ff; text-decoration:none; }
+    #modalImage{
+      height: 400px;
+      width: 700px;
+    }
+  </style>
+</head>
+<body class="tours-page">
+  
+
+  <!-- NAVBAR 2-->
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    
+    <div class="container">
+      
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        
+        <img src="./images/WhatsApp Image 2025-10-02 at 13.23.30_b26df04f - Copy.jpg" alt="Pleasant Tours logo" class="me-2">
+        <span class="fw-bold">Pleasant Tours</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#asia">Asia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#north-america">North America</a></li>
+          <li class="nav-item"><a class="nav-link" href="#south-america">South America</a></li>
+          <li class="nav-item"><a class="nav-link" href="#europe">Europe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#africa">Africa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#oceania">Oceania</a></li>
+          <li class="nav-item ms-2"><a class="btn btn-light text-primary" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+   
+  <header class="hero">
+     <div class="tour bg">
+          <video class="d-block w-100 hero-video" autoplay muted loop playsinline poster="images/hero1.jpg">
+            <source src="./videos/mounts hero 2.mp4" type="video/mp4">
+          </video>
+    <div class="hero-overlay">
+      <h1 class="display-5 fw-bold mb-2">See the world, differently</h1>
+      <p class="lead mb-3">Private-guided journeys and tailor-made itineraries across 60 international tours.</p>
+      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <a href="#europe" class="btn btn-primary btn-lg">Browse Tours</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Plan a Trip</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- NORTH AMERICA (5) -->
+    <section id="north-america">
+      <h2 class="category-title"> North America — 5 Tours</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Miami. Transfer to your hotel and settle in. Explore the iconic Art Deco district in South Beach, known for its colorful architecture from the 1920s and 1930s. Take a guided walking tour to learn about the history and admire the pastel-colored buildings. Evening free for dinner at a local restaurant. Day 2: Full day at Miami Beach. Relax on the pristine sands of South Beach, swim in the warm Atlantic waters, and enjoy the vibrant beach culture. Visit the nearby Vizcaya Museum and Gardens for a glimpse into Italian Renaissance architecture. In the evening, experience Miami's nightlife with live music or a cultural show. Day 3: Morning visit to Little Havana for an authentic Cuban experience, including traditional music, dance, and cuisine. Sample Cuban coffee and cigars. Afternoon free for shopping or relaxation. Transfer to the airport for departure."><img src="https://i.pinimg.com/736x/d8/99/8b/d8998b1fd5dbc2e92051750ead06fda1.jpg" class="card-img-top" alt="Miami"><div class="card-body d-flex flex-column"><h5 class="card-title">Miami Beach & Culture — 3 days</h5><p class="text-muted small">Art Deco district and beaches.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $479</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in San Francisco. Transfer to your accommodation. Start with a visit to the iconic Golden Gate Bridge – walk across or take a photo from Vista Point. Explore Fisherman's Wharf and enjoy fresh seafood. Ride the historic cable car through the steep hills. Evening at leisure. Day 2: Morning ferry to Alcatraz Island for a guided tour of the former prison, learning about its history. Afternoon in Chinatown, the oldest in North America, with dim sum lunch and shopping. Evening cruise in San Francisco Bay to see the city lights. Day 3: Visit to Lombard Street, the 'crookedest street in the world.' Explore Golden Gate Park with its museums and gardens. Free afternoon for personal exploration. Transfer to airport for departure."><img src="https://i.pinimg.com/1200x/da/bc/4a/dabc4aa28b63a023854d32bbc14a420d.jpg" class="card-img-top" alt="San Francisco"><div class="card-body d-flex flex-column"><h5 class="card-title">San Francisco & Bay — 3 days</h5><p class="text-muted small">Golden Gate, Alcatraz & cable cars.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $599</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Mexico City. Transfer to hotel. Visit the historic Zócalo (main square) and the Metropolitan Cathedral. Explore the National Palace with its murals by Diego Rivera. Evening traditional Mexican dinner. Day 2: Full day at Teotihuacan Pyramids, an ancient Aztec site. Climb the Pyramid of the Sun and Moon. Return to city for free time. Day 3: Culinary tour in the city – visit markets, learn about Mexican cuisine, and enjoy a cooking class. Afternoon at Chapultepec Castle and park. Day 4: Visit to Frida Kahlo Museum (Casa Azul) and Xochimilco floating gardens. Farewell dinner and transfer to airport."><img src="https://i.pinimg.com/736x/2d/a9/29/2da929a9aea8dae1c23a4a678d962632.jpg" class="card-img-top" alt="Mexico City"><div class="card-body d-flex flex-column"><h5 class="card-title">Mexico City & Culture — 4 days</h5><p class="text-muted small">Historic centers and cuisine tours.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $499</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Montreal. Settle in and explore Old Montreal with its cobblestone streets and European architecture. Visit Notre-Dame Basilica. Evening stroll along the St. Lawrence River. Day 2: Food-focused day – visit Jean-Talon Market for local produce and poutine. Take a culinary tour tasting Quebec specialties like maple syrup treats and cheeses. Afternoon at Mount Royal Park. Day 3: Visit to Olympic Park and Biodome. Free time for shopping in downtown. Farewell dinner featuring Quebec cuisine. Transfer to airport."><img src="https://i.pinimg.com/736x/9e/57/40/9e5740c8156cd3fc9437a4659e08356b.jpg" class="card-img-top" alt="Montreal"><div class="card-body d-flex flex-column"><h5 class="card-title">Montreal City & Food — 3 days</h5><p class="text-muted small">European charm and culinary highlights.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $529</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Cancun. Transfer to beach resort. Relax on the white sands of Cancun Beach, swim in the turquoise Caribbean Sea. Evening welcome dinner with Mexican specialties. Day 2: Full day at leisure – enjoy resort amenities, spa treatments, or water sports like snorkeling. Day 3: Excursion to Chichen Itza, a UNESCO World Heritage site with Mayan pyramids and ruins. Guided tour and cultural insights. Day 4: Visit to Xcaret Eco Park for underground rivers, cenotes, and wildlife. Evening show with traditional dances. Day 5: Morning free for shopping or relaxation. Transfer to airport for departure."><img src="https://i.pinimg.com/736x/e2/7b/d1/e27bd13a3ab68e150aeacef414464d57.jpg" class="card-img-top" alt="Cancun"><div class="card-body d-flex flex-column"><h5 class="card-title">Cancún Beach Escape — 5 days</h5><p class="text-muted small">Resorts, beaches & nearby ruins.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+      </div>
+    </section>
+
+    <!-- SOUTH AMERICA (10) -->
+    <section id="south-america">
+      <h2 class="category-title"> South America — 10 Tours</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/74/f1/2b/74f12b1c569b9b7833cfb27ac13f5d0d.jpg" class="card-img-top" alt="Machu Picchu"><div class="card-body d-flex flex-column"><h5 class="card-title">Machu Picchu Trek — 6 days</h5><p class="text-muted small">Sacred Valley & Inca trails.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/bf/dc/93/bfdc93e265dc102c9e1a0834b6e3728c.jpg" class="card-img-top" alt="Rio"><div class="card-body d-flex flex-column"><h5 class="card-title">Rio & Carnival Flavour — 5 days</h5><p class="text-muted small">Beaches, Christ the Redeemer & samba.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $899</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/e6/e0/32/e6e032961912e1cf0f362096069b80ab.jpg" class="card-img-top" alt="Buenos Aires"><div class="card-body d-flex flex-column"><h5 class="card-title">Buenos Aires & Tango — 4 days</h5><p class="text-muted small">Historic neighborhoods and tango shows.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $749</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/38/87/12/388712755dbec51b36ff0d9c8613687f.jpg" class="card-img-top" alt="Santiago"><div class="card-body d-flex flex-column"><h5 class="card-title">Santiago & Wine Valleys — 4 days</h5><p class="text-muted small">City culture and nearby vineyards.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/0b/51/41/0b514194d8d8bbea719019d8b5ddcfbd.jpg" class="card-img-top" alt="Cartagena"><div class="card-body d-flex flex-column"><h5 class="card-title">Cartagena & Colonial Streets — 4 days</h5><p class="text-muted small">Colorful streets and coastal charm.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $649</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/44/86/74/44867470c173b75ccb1bcfd74f6e6e1a.jpg" class="card-img-top" alt="Patagonia"><div class="card-body d-flex flex-column"><h5 class="card-title">Patagonia Wilderness — 8 days</h5><p class="text-muted small">Glaciers, hikes and wild landscapes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1499</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/a8/0c/20/a80c20affc05a31ec48d6d996ce7f398.jpg" class="card-img-top" alt="Galapagos"><div class="card-body d-flex flex-column"><h5 class="card-title">Galapagos Wildlife Cruise — 7 days</h5><p class="text-muted small">Unique wildlife and marine life.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $2199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/8b/51/fb/8b51fb92fbeb4ed66284630a46dfd0b9.jpg" class="card-img-top" alt="Lima"><div class="card-body d-flex flex-column"><h5 class="card-title">Lima Food & Culture — 4 days</h5><p class="text-muted small">Culinary tours and coastal charm.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $549</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/ba/76/7a/ba767a40c0f07616959d8b4e7ac099f6.jpg" class="card-img-top" alt="Uyuni"><div class="card-body d-flex flex-column"><h5 class="card-title">Salar de Uyuni Experience — 3 days</h5><p class="text-muted small">Otherworldly salt flats and photography tours.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $799</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/6f/39/8c/6f398ccc1bc9c2247d2f1561e73fdc44.jpg" class="card-img-top" alt="Quito"><div class="card-body d-flex flex-column"><h5 class="card-title">Quito City & Highlands — 4 days</h5><p class="text-muted small">Colonial Quito and Andean landscapes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $599</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+      </div>
+    </section>
+
+    <!-- EUROPE (10) -->
+    <section id="europe">
+      <h2 class="category-title"> Europe — 10 Tours</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/86/e5/ad/86e5ad6b18d1a21493c9e6374e865d33.jpg" class="card-img-top" alt="Paris"><div class="card-body d-flex flex-column"><h5 class="card-title">Paris Getaway — 4 days</h5><p class="text-muted small">Eiffel Tower, Louvre & Seine cruise.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $799</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/ca/db/55/cadb557921d14ebd3638e18ac9acb6d9.jpg" class="card-img-top" alt="London"><div class="card-body d-flex flex-column"><h5 class="card-title">London Highlights — 4 days</h5><p class="text-muted small">Buckingham, Thames, West End.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $749</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/b2/bf/44/b2bf440567ed2142d509876609b3023a.jpg" class="card-img-top" alt="Rome"><div class="card-body d-flex flex-column"><h5 class="card-title">Rome & Vatican — 3 days</h5><p class="text-muted small">Colosseum, Vatican & gelato tours.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/28/41/3d/28413d13c0fea05bf0ed387e7b85c276.jpg" class="card-img-top" alt="Barcelona"><div class="card-body d-flex flex-column"><h5 class="card-title">Barcelona & Gaudí — 4 days</h5><p class="text-muted small">Sagrada Familia, tapas & beaches.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $599</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/16/55/a8/1655a80c30d99d1a09d71c5ea8e648f2.jpg" class="card-img-top" alt="Amsterdam"><div class="card-body d-flex flex-column"><h5 class="card-title">Amsterdam Canals — 3 days</h5><p class="text-muted small">Canal tours, museums & markets.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $549</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/21/83/ab/2183ab07ff2e0e561e0e0738705d4343.jpg" class="card-img-top" alt="Athens"><div class="card-body d-flex flex-column"><h5 class="card-title">Athens & Ancient Sites — 4 days</h5><p class="text-muted small">Acropolis, Plaka & Mediterranean bites.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $599</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/e6/2c/20/e62c20530e856afe2b8620aad68c8da8.jpg" class="card-img-top" alt="Prague"><div class="card-body d-flex flex-column"><h5 class="card-title">Prague Fairytale — 3 days</h5><p class="text-muted small">Castle, Old Town & river walks.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $499</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/aa/ef/8b/aaef8bf01fd4dba09cb18bbce3fae93d.jpg" class="card-img-top" alt="Venice"><div class="card-body d-flex flex-column"><h5 class="card-title">Venice Romance — 2 days</h5><p class="text-muted small">Gondolas, canals & historic palaces.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $449</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/4a/e3/ba/4ae3ba033bbe11ec42f0842830661eb4.jpg" class="card-img-top" alt="Berlin"><div class="card-body d-flex flex-column"><h5 class="card-title">Berlin City & Culture — 3 days</h5><p class="text-muted small">History, nightlife & creative districts.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $529</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/99/97/89/9997897622ecd97567760f458cb7618f.jpg" class="card-img-top" alt="Swiss Alps"><div class="card-body d-flex flex-column"><h5 class="card-title">Swiss Alps Adventure — 6 days</h5><p class="text-muted small">Alpine hikes, scenic trains and lakes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+      </div>
+    </section>
+
+    <!-- AFRICA (10) -->
+    <section id="africa">
+      <h2 class="category-title"> Africa — 10 Tours</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/a8/92/87/a892878d5917b95dab293af2edf8fa6c.jpg" class="card-img-top" alt="Maasai Mara"><div class="card-body d-flex flex-column"><h5 class="card-title">Kenya Safari — 7 days</h5><p class="text-muted small">Big game, Maasai Mara & guided safaris.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1499</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/0d/fc/3f/0dfc3f75185a7bab94f00dc2e3c25219.jpg" class="card-img-top" alt="Cape Town"><div class="card-body d-flex flex-column"><h5 class="card-title">Cape Town & Winelands — 5 days</h5><p class="text-muted small">Coastal scenery & vineyards.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/d7/b7/65/d7b76597ca5017abbe093ef12f07036e.jpg" class="card-img-top" alt="Cairo"><div class="card-body d-flex flex-column"><h5 class="card-title">Cairo & Pyramids — 4 days</h5><p class="text-muted small">Egyptian antiquities and Nile glimpses.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $899</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/e3/29/5e/e3295ea59c9952413e0a4037bd337ae5.jpg" class="card-img-top" alt="Marrakech"><div class="card-body d-flex flex-column"><h5 class="card-title">Marrakech & Medina — 4 days</h5><p class="text-muted small">Markets, palaces & desert options.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/66/a7/2b/66a72b4833d8f21330c74b9ab813b7dd.jpg" class="card-img-top" alt="Serengeti"><div class="card-body d-flex flex-column"><h5 class="card-title">Tanzania Safari & Ngorongoro — 7 days</h5><p class="text-muted small">Wildlife, crater & eco experiences.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1599</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/ad/4b/32/ad4b32806c0a3eb06fe22bbe55afac08.jpg" class="card-img-top" alt="Lalibela"><div class="card-body d-flex flex-column"><h5 class="card-title">Ethiopia Heritage Tour — 6 days</h5><p class="text-muted small">Rock-hewn churches and ancient culture.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/03/f4/9f/03f49f49d2c788ca38646cd1ec16ff54.jpg" class="card-img-top" alt="Namibia"><div class="card-body d-flex flex-column"><h5 class="card-title">Namibia Desert Safari — 6 days</h5><p class="text-muted small">Dunes, wildlife & remote landscapes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1399</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/81/99/e2/8199e20022ece2d262f14c8343d75b52.jpg" class="card-img-top" alt="Madagascar"><div class="card-body d-flex flex-column"><h5 class="card-title">Madagascar Biodiversity Tour — 8 days</h5><p class="text-muted small">Unique species and remote forests.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/aa/cd/23/aacd2357f61b8e4b6422778155f67a0b.jpg" class="card-img-top" alt="Seychelles"><div class="card-body d-flex flex-column"><h5 class="card-title">Seychelles Island Escape — 7 days</h5><p class="text-muted small">Beaches, coral reefs & luxury stays.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1799</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/6d/a4/6d/6da46d3c5575e8278a5afdaad929e34d.jpg" class="card-img-top" alt="Zanzibar"><div class="card-body d-flex flex-column"><h5 class="card-title">Zanzibar Beach & Culture — 5 days</h5><p class="text-muted small">Spice tours, beaches & Swahili culture.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $899</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+      </div>
+    </section>
+
+    <!-- OCEANIA (10) -->
+    <section id="oceania">
+      <h2 class="category-title"> Oceania & Islands — 10 Tours</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/57/06/6c/57066c3d3e73cd653586d5f2235e813a.jpg" class="card-img-top" alt="Sydney"><div class="card-body d-flex flex-column"><h5 class="card-title">Sydney Explorer — 4 days</h5><p class="text-muted small">Opera House, Bondi & harbour cruises.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1099</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/dd/12/91/dd1291a1861b8c09377f174552ad5e77.jpg" class="card-img-top" alt="Great Barrier Reef"><div class="card-body d-flex flex-column"><h5 class="card-title">Great Barrier Reef Dive — 5 days</h5><p class="text-muted small">Diving and reef exploration.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1299</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/57/05/13/5705139dc1ecd878ed3770fccc6bae50.jpg" class="card-img-top" alt="Queenstown"><div class="card-body d-flex flex-column"><h5 class="card-title">Queenstown Adventure — 6 days</h5><p class="text-muted small">Lakes, mountains & adventure sports.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/b1/3a/70/b13a70712c260fa78fedc086ed19c9f7.jpg" class="card-img-top" alt="Fiji"><div class="card-body d-flex flex-column"><h5 class="card-title">Fiji Island Retreat — 6 days</h5><p class="text-muted small">Lagoon stays and island culture.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1299</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/92/1b/37/921b37d60a428256af3bcac6c131243c.jpg" class="card-img-top" alt="Bora Bora"><div class="card-body d-flex flex-column"><h5 class="card-title">Bora Bora & Tahiti — 6 days</h5><p class="text-muted small">Overwater bungalows & lagoon tours.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $2399</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/4a/07/39/4a07391a18c4a568d0d080fb8f37ae9f.jpg" class="card-img-top" alt="Hawaii"><div class="card-body d-flex flex-column"><h5 class="card-title">Hawaii Island Hopping — 7 days</h5><p class="text-muted small">Beaches, volcanoes & island culture.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1799</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/c2/c3/76/c2c3764baa1e19e51109ae98118ee722.jpg" class="card-img-top" alt="Auckland"><div class="card-body d-flex flex-column"><h5 class="card-title">Auckland & Islands — 5 days</h5><p class="text-muted small">City highlights & nearby islands.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1099</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/eb/38/02/eb38021996b92e51b76bbc4df26d69a3.jpg" class="card-img-top" alt="Melbourne"><div class="card-body d-flex flex-column"><h5 class="card-title">Melbourne City & Coast — 4 days</h5><p class="text-muted small">Art laneways, coastlines & food scenes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $999</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/43/15/1a/43151a2f362e6bbb9f5c2dedbb501155.jpg" class="card-img-top" alt="Samoa"><div class="card-body d-flex flex-column"><h5 class="card-title">Samoa Island Discovery — 6 days</h5><p class="text-muted small">Tradition, waterfalls and island living.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1299</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/02/42/e9/0242e979983a72a816b8d8a4cdd5a8d4.jpg" class="card-img-top" alt="Milford Sound"><div class="card-body d-flex flex-column"><h5 class="card-title">Milford Sound Cruising — 4 days</h5><p class="text-muted small">Fiords, waterfalls & wildlife.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1299</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Pleasant Tours</h6>
+            <p class="small text-muted mb-0">Private-guided journeys and tailor-made itineraries.</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled small mb-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="itineraries.html">Itineraries</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Contact</h6>
+            <p class="small mb-1">hello@pleasanttours.example</p>
+            <div class="social">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center legal">
+            <small>&copy; <span id="yearIndex"></span> Pleasant Tours — All rights reserved.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- jsPDF for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    AOS.init({ duration: 800, once: true, mirror: false });
+    document.getElementById('yearIndex').textContent = new Date().getFullYear();
+
+    // Handle Details button clicks
+    document.addEventListener('DOMContentLoaded', function() {
+      const detailsButtons = document.querySelectorAll('.card .btn-primary');
+      const modal = new bootstrap.Modal(document.getElementById('tourModal'));
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalPrice = document.getElementById('modalPrice');
+
+      detailsButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const card = this.closest('.card');
+          const img = card.querySelector('.card-img-top');
+          const title = card.querySelector('.card-title').textContent;
+          const desc = card.querySelector('.text-muted').textContent;
+          const price = card.querySelector('.badge-price').textContent;
+          const itinerary = card.getAttribute('data-itinerary') || 'Itinerary details not available.';
+
+          modalImage.src = img.src;
+          modalImage.alt = img.alt;
+          modalTitle.textContent = title;
+          modalDescription.textContent = itinerary;
+          modalPrice.textContent = price;
+
+          modal.show();
+        });
+      });
+
+      // Handle PDF download
+      document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        doc.setFontSize(20);
+        doc.text(modalTitle.textContent, 20, 30);
+
+        doc.setFontSize(12);
+        const splitDesc = doc.splitTextToSize(modalDescription.textContent, 170);
+        doc.text(splitDesc, 20, 50);
+
+        doc.text(modalPrice.textContent, 20, 100);
+
+        doc.save(`${modalTitle.textContent.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_itinerary.pdf`);
+      });
+    });
+  </script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="tourModal" tabindex="-1" aria-labelledby="tourModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tourModalLabel">Tour Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="" class="img-fluid mb-3">
+          <h4 id="modalTitle"></h4>
+          <p id="modalDescription"></p>
+          <div class="badge-price" id="modalPrice"></div>
+          <button id="downloadPdfBtn" class="btn btn-primary mt-3">Download Itinerary as PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

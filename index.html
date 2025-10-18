@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pleasant Tours | Tailor-Made Private Tours</title>
+  <link rel="stylesheet" href="./code/tours.html">
+
+  
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your custom stylesheet -->
+  <link rel="stylesheet" href="./code/style.css">
+
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Quick fixes inlined — move to style.css */
+    .hero-video {
+      object-fit: cover;
+      height: 100vh;
+    }
+
+    .carousel-caption {
+      bottom: 20%;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption h2 {
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-success {
+      background-color: #28a745;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: #004a99;
+      border: none;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./images/WhatsApp Image 2025-10-02 at 13.23.30_b26df04f - Copy.jpg" alt="Pleasant Tours Logo" height="44"
+          class="me-2">
+        <span class="fw-bold">Pleasant Tours</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./code/tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="./code/itineraries.html">Itineraries</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Price List</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-3"><a class="nav-link btn btn-outline-primary" href="game.html">Game</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO Carousel with Background Videos -->
+  <header class="mt-navbar">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+      aria-label="Featured tours">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <video class="d-block w-100 hero-video" autoplay muted loop playsinline poster="../images/hero1.jpg">
+            <source src="./videos/mounts hero 2.mp4" type="video/mp4">
+          </video>
+          <div class="carousel-caption text-start" data-aos="zoom-in">
+            <h1 class="display-5 fw-bold">See the world, differently</h1>
+            <p class="lead">Private-guided journeys, tailored just for you — in 100+ countries.</p>
+            <a href="tours.html" class="btn btn-success btn-lg">Explore Tours</a>
+            <a href="itineraries.html" class="btn btn-primary btn-lg ms-2">Download Itinerary</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <video class="d-block w-100 hero-video" autoplay muted loop playsinline poster="../images/hero2.jpg">
+            <source src="./videos/waterfall hero.mp4" type="video/mp4">
+          </video>
+          <div class="carousel-caption">
+            <h2 class="display-5 fw-bold">Local guides — unforgettable access</h2>
+            <p class="lead">VIP access, curated experiences, and expert handling from start to finish.</p>
+            <a href="#about" class="btn btn-outline-light">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <video class="d-block w-100 hero-video" autoplay muted loop playsinline poster="../images/hero3.jpg">
+            <source src="./videos/culture heri s2.mp4" type="video/mp4">
+          </video>
+          <div class="carousel-caption">
+            <h2 class="display-5 fw-bold">Immersive Cultural Journeys</h2>
+            <p class="lead">Meet locals, join traditions, and experience culture firsthand.</p>
+            <a href="#about" class="btn btn-outline-light">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section class="py-5 bg-light" id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Explore Our Tour Categories</h2>
+        <p class="text-muted">Choose from our curated collection of Hill Stations, Beaches, and Forts & Palaces — each
+          promising unforgettable memories.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Hill Stations -->
+        <div class="col-md-4">
+          <div class="service-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-0">
+            <div class="service-img">
+              <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=60"
+                class="img-fluid" alt="Hill Stations">
+            </div>
+            <div class="p-4 text-center">
+              <h5 class="fw-bold text-dark mb-2">Hill Station Tours</h5>
+              <p class="text-muted small mb-3">Escape to serene mountain landscapes — perfect for nature lovers and
+                peace seekers.</p>
+              <a href="tours.html#hill" class="btn btn-primary btn-sm px-4 rounded-pill">Take Me There</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beach Tours -->
+        <div class="col-md-4">
+          <div class="service-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-0">
+            <div class="service-img">
+              <img src="https://i.pinimg.com/736x/8f/e7/2d/8fe72de4b872778728d551f8ddfdca55.jpg" class="img-fluid"
+                alt="Beach Tours">
+            </div>
+            <div class="p-4 text-center">
+              <h5 class="fw-bold text-dark mb-2">Beach Tours</h5>
+              <p class="text-muted small mb-3">Sun, sand, and sea! Enjoy the world’s most breathtaking coastal getaways.
+              </p>
+              <a href="tours.html#beach" class="btn btn-primary btn-sm px-4 rounded-pill">Take Me There</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forts & Palaces -->
+        <div class="col-md-4">
+          <div class="service-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-0">
+            <div class="service-img">
+              <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=900&q=60"
+                class="img-fluid" alt="Forts and Palaces">
+            </div>
+            <div class="p-4 text-center">
+              <h5 class="fw-bold text-dark mb-2">Forts & Palaces Tours</h5>
+              <p class="text-muted small mb-3">Step into royal history — discover India’s magnificent forts and grand
+                palaces.</p>
+              <a href="tours.html#forts" class="btn btn-primary btn-sm px-4 rounded-pill">Take Me There</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Hover Glow -->
+  <style>
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+
+
+  <!-- Custom Styles -->
+  <style>
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-img img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-img img {
+      transform: scale(1.05);
+    }
+
+    #services h2 {
+      letter-spacing: 0.5px;
+    }
+  </style>
+
+  <!-- Featured Tours -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Featured Tours</h2>
+        <a href="tours.html" class="btn btn-sm btn-outline-secondary">See all tours</a>
+      </div>
+
+      <div class="row g-4" data-aos="fade-up">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival at the coastal resort. Settle in and enjoy a welcome dinner with fresh seafood. Day 2: Morning beach walk along the pristine shores, followed by snorkeling in the clear waters. Afternoon free for relaxation. Day 3: Sunset cruise with champagne and local delicacies. Day 4: Visit nearby islands for hiking and picnics. Day 5: Leisure time at the resort, optional spa treatments. Transfer to airport for departure.">
+            <img src="./images/coastall.jpg" class="card-img-top" alt="Coastal Escape">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Coastal Escape — 5 days</h5>
+              <p class="text-muted small mb-3">Beach walks, seafood and sunset cruise.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <div class="fw-bold text-success">From $399</div>
+                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival at the mountain base. Transfer to lodge and orientation. Day 2-6: Daily hikes to various peaks, exploring trails, wildlife, and local villages. Enjoy traditional meals. Day 7: Return to base and departure.">
+            <img src="./images/mounts.jpg" class="card-img-top" alt="Mountain Trails">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Mountain Trails — 7 days</h5>
+              <p class="text-muted small mb-3">Hikes, lodges, and local cuisine.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <div class="fw-bold text-success">From $699</div>
+                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4 gap-2">
+          <div class="card h-100 shadow-sm" data-itinerary="Day 1: Morning arrival, visit central market and museum. Afternoon walking tour of historic sites. Day 2: Explore local cuisine, shopping, and optional evening show. Transfer to airport.">
+            <img src="./images/city.jpg" class="card-img-top" alt="City Highlights">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">City Highlights — 2 days</h5>
+              <p class="text-muted small mb-3">Markets, museums & walking tours.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <div class="fw-bold text-success">From $149</div>
+                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 text-center text-white" <h3>Ready to plan your journey?</h3>
+    <p class="text-muted mb-3 text-white">Tell us where you'd like to go and we will craft a tailored itinerary.</p>
+    <a class="btn btn-success btn-lg text-white" href="contact.html">Contact us</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5 bg-white" id="about" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h2 class="h3 fw-bold">About Pleasant Tours</h2>
+          <p class="text-muted">Pleasant Tours crafts memorable journeys across beaches, mountains and cultural gems. We
+            provide private-guided tours, curated stays, and bespoke itineraries tailored to your interests.</p>
+          <ul class="list-unstyled small text-muted">
+            <li><i class="bi bi-check2-circle text-primary me-2"></i>Personalised itineraries</li>
+            <li><i class="bi bi-check2-circle text-primary me-2"></i>Local guides and small groups</li>
+            <li><i class="bi bi-check2-circle text-primary me-2"></i>Transparent pricing and support</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="https://i.pinimg.com/736x/7c/9f/5f/7c9f5f72706ac7af3412224c2ac39895.jpg"
+            class="img-fluid rounded-3 shadow-sm" alt="About Pleasant Tours">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us / Highlights -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container text-center">
+      <h3 class="mb-4">Why Choose Pleasant Tours</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm p-3">
+            <div class="card-body">
+              <i class="bi bi-geo-alt display-6 text-primary"></i>
+              <h5 class="mt-3">Curated Destinations</h5>
+              <p class="small text-muted">Hand-picked experiences and local access to make your trip exceptional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm p-3">
+            <div class="card-body">
+              <i class="bi bi-people display-6 text-primary"></i>
+              <h5 class="mt-3">Trusted Local Guides</h5>
+              <p class="small text-muted">Expert guides who bring culture and history to life.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm p-3">
+            <div class="card-body">
+              <i class="bi bi-wallet2 display-6 text-primary"></i>
+              <h5 class="mt-3">Transparent Pricing</h5>
+              <p class="small text-muted">Clear pricing and optional add-ons with no hidden fees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Pleasant Tours</h6>
+            <p class="small text-muted mb-0">Private-guided journeys and tailor-made itineraries.</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled small mb-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="itineraries.html">Itineraries</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Contact</h6>
+            <p class="small mb-1">hello@pleasanttours.example</p>
+            <div class="social">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center legal">
+            <small>&copy; <span id="yearIndex"></span> Pleasant Tours — All rights reserved.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="java.js"></script>
+  <script>
+    // small inline fallback AOS init for pages that included AOS JS
+    if (window.AOS) AOS.init({ duration: 700, once: true });
+  </script>
+</body>
+
+</html>

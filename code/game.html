@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pleasant Tours | Spin & Win</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .wheel-container {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      background: conic-gradient(
+        #ff7675 0deg 51.4deg,
+        #74b9ff 51.4deg 102.8deg,
+        #55efc4 102.8deg 154.2deg,
+        #ffeaa7 154.2deg 205.6deg,
+        #fd79a8 205.6deg 257deg,
+        #a29bfe 257deg 308.4deg,
+        #fab1a0 308.4deg 360deg
+      );
+      transition: transform 4s ease-out;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .wheel-label {
+      position: absolute;
+      width: 100px;
+      left: 50%;
+      top: 50%;
+      transform-origin: center left;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .pointer {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 30px solid #ffc107;
+      margin: 0 auto 20px;
+    }
+
+    #spin-btn {
+      margin-top: 25px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./images/WhatsApp Image 2025-10-02 at 13.23.30_b26df04f - Copy.jpg" alt="Pleasant Tours Logo" height="44" class="me-2">
+        <span class="fw-bold">Pleasant Tours</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="itineraries.html">Itineraries</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Price List</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-3"><a class="nav-link btn btn-outline-primary" href="game.html">Game</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Game Section -->
+  <section class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+    <div class="pointer"></div>
+    <div id="wheel" class="wheel-container"></div>
+    <button id="spin-btn" class="btn btn-warning fw-bold shadow">🎡 Spin the Wheel!</button>
+    <p class="mt-3 fs-5">Try your luck and win exclusive travel rewards!</p>
+  </section>
+
+  <!-- Prize Modal -->
+  <div class="modal fade" id="resultModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title">🎉 Congratulations!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p id="resultText" class="fs-5 mb-3"></p>
+          <button class="btn btn-success" data-bs-target="#claimModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+            Claim Your Prize
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Claim Prize Modal -->
+  <div class="modal fade" id="claimModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title">🎁 Redeem Your Prize</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="claimForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Prize</label>
+              <input type="text" id="claimedPrize" class="form-control" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-1">© 2025 Pleasant Tours | Explore with us 🌍</p>
+    <a href="mailto:info@pleasanttours.com">info@pleasanttours.com</a>
+    <div class="mt-2">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const prizes = [
+      "Free Tour",
+      "10% Discount",
+      "Travel Kit",
+      "Souvenir",
+      "Flight Upgrade",
+      "Bonus Miles",
+      "Thank You (No Reward)"
+    ];
+
+    const wheel = document.getElementById('wheel');
+    const spinBtn = document.getElementById('spin-btn');
+    const resultText = document.getElementById('resultText');
+    const claimPrizeInput = document.getElementById('claimedPrize');
+    const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+    const num = prizes.length;
+    const segmentAngle = 360 / num;
+
+    // --- Fixed Label Placement ---
+    prizes.forEach((prize, i) => {
+      const label = document.createElement('div');
+      label.className = 'wheel-label';
+      const rotation = i * segmentAngle + segmentAngle / 2;
+      label.style.transform = `rotate(${rotation}deg) translateX(130px) rotate(90deg)`;
+      label.textContent = prize;
+      wheel.appendChild(label);
+    });
+
+    let spinning = false;
+    let currentRotation = 0;
+
+    spinBtn.addEventListener('click', () => {
+      if (spinning) return;
+      spinning = true;
+      spinBtn.disabled = true;
+
+      const extraSpins = 10 * 360;
+      const randomStop = Math.floor(Math.random() * 360);
+      const totalRotation = currentRotation + extraSpins + randomStop;
+      wheel.style.transition = 'transform 4s ease-out';
+      wheel.style.transform = `rotate(${totalRotation}deg)`;
+
+      setTimeout(() => {
+        currentRotation = totalRotation % 360;
+        const winningIndex = Math.floor((360 - currentRotation) / segmentAngle) % num;
+        const prize = prizes[winningIndex];
+        resultText.textContent = `You won: ${prize}!`;
+        claimPrizeInput.value = prize;
+        resultModal.show();
+        spinning = false;
+        spinBtn.disabled = false;
+      }, 4200);
+    });
+
+    document.getElementById('claimForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("🎉 Your prize has been submitted! We'll contact you soon.");
+      bootstrap.Modal.getInstance(document.getElementById('claimModal')).hide();
+    });
+  </script>
+</body>
+</html>

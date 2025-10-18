@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Pleasant Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pricing-page">
+   <!-- NAVBAR (same pattern as your index) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../images/WhatsApp Image 2025-10-02 at 13.23.30_b26df04f - Copy.jpg" alt="Pleasant Tours Logo" height="40" class="me-2">
+        <span class="fw-bold">Pleasant Tours</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Navigation (Copy from index.html) -->
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Pricing</h1>
+            <p class="text-center lead">Our tours are custom-designed, so pricing varies by itinerary, dates, and group size. Starting from $900 USD per person (double occupancy). Download the full price list below.</p>
+            
+            <!-- Download Price List -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <a href="./itineraries/Pleasant_Tours_Price_List.pdf" class="btn btn-success btn-lg" download><i class="bi bi-download me-1"></i> Download Full Price List (PDF)</a>
+                <p class="mt-2 small">Includes all 60 tours with seasonal rates and inclusions.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="accordion" id="pricingAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Standard Tours Pricing
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Beach Tours: $900–$1,500</li>
+                                        <li>Hill Stations: $800–$1,200</li>
+                                        <li>Forts/Palaces: $1,000–$2,000</li>
+                                        <li>Wildlife Safaris: $1,100–$1,800</li>
+                                    </ul>
+                                    <p>Inclusions: Private guides, accommodations, meals. Extras: Flights, visas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more accordions for categories if needed -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Tours on Pricing Page -->
+            <div class="row g-4 mt-5" data-aos="fade-up">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival at the coastal resort. Settle in and enjoy a welcome dinner with fresh seafood. Day 2: Morning beach walk along the pristine shores, followed by snorkeling in the clear waters. Afternoon free for relaxation. Day 3: Sunset cruise with champagne and local delicacies. Day 4: Visit nearby islands for hiking and picnics. Day 5: Leisure time at the resort, optional spa treatments. Transfer to airport for departure.">
+                        <img src="../images/coastall.jpg" class="card-img-top" alt="Coastal Escape">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Coastal Escape — 5 days</h5>
+                            <p class="text-muted small mb-3">Beach walks, seafood and sunset cruise.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div class="fw-bold text-success">From $399</div>
+                                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival at the mountain base. Transfer to lodge and orientation. Day 2-6: Daily hikes to various peaks, exploring trails, wildlife, and local villages. Enjoy traditional meals. Day 7: Return to base and departure.">
+                        <img src="../images/mounts.jpg" class="card-img-top" alt="Mountain Trails">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mountain Trails — 7 days</h5>
+                            <p class="text-muted small mb-3">Hikes, lodges, and local cuisine.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div class="fw-bold text-success">From $699</div>
+                                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm" data-itinerary="Day 1: Morning arrival, visit central market and museum. Afternoon walking tour of historic sites. Day 2: Explore local cuisine, shopping, and optional evening show. Transfer to airport.">
+                        <img src="../images/city.jpg" class="card-img-top" alt="City Highlights">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">City Highlights — 2 days</h5>
+                            <p class="text-muted small mb-3">Markets, museums & walking tours.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <div class="fw-bold text-success">From $149</div>
+                                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact CTA & Form -->
+        <section class="py-5 bg-light" data-aos="fade-up">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h4>Contact & Inquiries</h4>
+                        <p class="small text-muted">For price queries and custom itineraries, email us:</p>
+                        <p><strong>Email:</strong> <a href="mailto:pleasanttours@gmail.com">pleasanttours@gmail.com</a></p>
+                        <p><strong>Office:</strong><br>
+                            Pleasant Tours Pvt. Ltd.<br>
+                            Travel Complex, Opp. Main Bus Stand,<br>
+                            Mumbai - 400001</p>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="p-3 bg-white rounded-3 shadow-sm" id="priceContact" novalidate>
+                            <div class="mb-2"><input class="form-control" placeholder="Name" required></div>
+                            <div class="mb-2"><input class="form-control" type="email" placeholder="Email" required></div>
+                            <div class="mb-2"><textarea class="form-control" rows="3" placeholder="Message" required></textarea></div>
+                            <button class="btn btn-primary">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+
+               <div class="ratio ratio-21x9">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.534192344293!2d67.0652637!3d24.9819581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1759389539281!5m2!1sen!2s" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Footer -->
+                <footer class="site-footer">
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Pleasant Tours</h6>
+                                    <p class="small text-muted mb-0">Private-guided journeys and tailor-made itineraries.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Quick Links</h6>
+                                    <ul class="list-unstyled small mb-0">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="tours.html">Tours</a></li>
+                                        <li><a href="itineraries.html">Itineraries</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Contact</h6>
+                                    <p class="small mb-1">hello@pleasanttours.example</p>
+                                    <div class="social">
+                                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 text-center legal">
+                                    <small>&copy; <span id="yearIndex"></span> Pleasant Tours — All rights reserved.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Consolidated site styles (moved from inline pages) */
+:root{ --primary-color:#0066cc; --accent:#ffc107; --navy:#001f3f; }
+body{ font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:#f8fafc; color:#111; }
+.navbar{ box-shadow: 0 2px 5px rgba(0,0,0,0.08); }
+.hero{ position:relative; display:flex; align-items:center; justify-content:center; padding:4rem 0; background:#e9f2ff; }
+.card img{ border-radius:8px; }
+.card{ border-radius:12px; }
+.site-footer{ background:#0b1220; color:#cfcfcf; padding:2rem 0; }
+.site-footer a{ color:#bcd4ff; }
+.btn-primary{ background:var(--primary-color); border:none; }
+@media (max-width:576px){ .hero{ padding:2rem 0; } }
