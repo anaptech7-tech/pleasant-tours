@@ -76,6 +76,11 @@
           <li class="nav-item"><a class="nav-link" href="pricing.html">Price List</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-3"><a class="nav-link btn btn-outline-primary" href="game.html">Game</a></li>
+          <li class="nav-item ms-2">
+            <button class="btn btn-outline-primary position-relative" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <i class="bi bi-cart"></i> Cart <span class="badge bg-danger" id="cartCount">0</span>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -250,7 +255,7 @@
               <p class="text-muted small mb-3">Beach walks, seafood and sunset cruise.</p>
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="fw-bold text-success">From $399</div>
-                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Details</a>
               </div>
             </div>
           </div>
@@ -264,7 +269,7 @@
               <p class="text-muted small mb-3">Hikes, lodges, and local cuisine.</p>
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="fw-bold text-success">From $699</div>
-                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Details</a>
               </div>
             </div>
           </div>
@@ -278,7 +283,7 @@
               <p class="text-muted small mb-3">Markets, museums & walking tours.</p>
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="fw-bold text-success">From $149</div>
-                <a href="itineraries.html" class="btn btn-sm btn-primary">Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Details</a>
               </div>
             </div>
           </div>
@@ -288,10 +293,10 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-5 text-center text-white" <h3>Ready to plan your journey?</h3>
+  <section class="py-5 text-center text-white" style="background-color: #004a99;">
+    <h3>Ready to plan your journey?</h3>
     <p class="text-muted mb-3 text-white">Tell us where you'd like to go and we will craft a tailored itinerary.</p>
     <a class="btn btn-success btn-lg text-white" href="contact.html">Contact us</a>
-    </div>
   </section>
 
   <!-- About Section -->
@@ -389,9 +394,61 @@
     </div>
   </footer>
 
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItems">
+            <p>Your cart is empty.</p>
+          </div>
+          <div class="mt-3">
+            <button id="orderNowBtn" class="btn btn-primary" disabled>Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Itinerary Details Modal -->
+  <div class="modal fade" id="itineraryModal" tabindex="-1" aria-labelledby="itineraryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="itineraryModalLabel">Itinerary Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img id="itineraryModalImage" src="" alt="Tour Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+              <h4 id="itineraryModalTitle"></h4>
+              <p id="itineraryModalDescription" class="text-muted"></p>
+              <p class="fw-bold text-success" id="itineraryModalPrice"></p>
+              <button id="addToCartFromItinerary" class="btn btn-primary">Add to Cart</button>
+              <button id="downloadItineraryBtn" class="btn btn-outline-secondary ms-2">Download PDF</button>
+            </div>
+          </div>
+          <hr>
+          <h5>Itinerary Details:</h5>
+          <p id="itineraryModalDetails"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- jsPDF for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="java.js"></script>
   <script>
     // small inline fallback AOS init for pages that included AOS JS
