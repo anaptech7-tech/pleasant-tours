@@ -5,25 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pleasant Tours — Explore with Us</title>
   <meta name="description" content="Pleasant Tours - 60 international tours, responsive catalog." />
-  <link rel="stylesheet" href="./index.html">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Optional site stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pleasant Tours — Explore with Us</title>
-  <meta name="description" content="Pleasant Tours - 60 international tours, responsive catalog." />
-
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -59,7 +40,7 @@
     /* HERO */
     .hero {
       height: 87vh;
-      background: url('https://www.pexels.com/download/video/3094026/') center/cover no-repeat;
+      
     }
     .hero-overlay{
       background: rgba(0,0,0,0.45);
@@ -109,13 +90,17 @@
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#asia">Asia</a></li>
           <li class="nav-item"><a class="nav-link" href="#north-america">North America</a></li>
           <li class="nav-item"><a class="nav-link" href="#south-america">South America</a></li>
           <li class="nav-item"><a class="nav-link" href="#europe">Europe</a></li>
           <li class="nav-item"><a class="nav-link" href="#africa">Africa</a></li>
           <li class="nav-item"><a class="nav-link" href="#oceania">Oceania</a></li>
-          <li class="nav-item ms-2"><a class="btn btn-light text-primary" href="contact.html">Contact</a></li>
+      <li class="nav-item ms-2"><a class="btn btn-light text-primary" href="contact.html">Contact</a></li>
+      <li class="nav-item ms-2">
+        <button class="btn btn-outline-primary position-relative" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="bi bi-cart"></i> Cart <span class="badge bg-danger" id="cartCount">0</span>
+        </button>
+      </li>
         </ul>
       </div>
     </div>
@@ -126,7 +111,7 @@
   <header class="hero">
      <div class="tour bg">
           <video class="d-block w-100 hero-video" autoplay muted loop playsinline poster="images/hero1.jpg">
-            <source src="./videos/mounts hero 2.mp4" type="video/mp4">
+            <source src="./videos/tours vid.mp4" type="video/mp4">
           </video>
     <div class="hero-overlay">
       <h1 class="display-5 fw-bold mb-2">See the world, differently</h1>
@@ -161,17 +146,16 @@
     <section id="south-america">
       <h2 class="category-title"> South America — 10 Tours</h2>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/74/f1/2b/74f12b1c569b9b7833cfb27ac13f5d0d.jpg" class="card-img-top" alt="Machu Picchu"><div class="card-body d-flex flex-column"><h5 class="card-title">Machu Picchu Trek — 6 days</h5><p class="text-muted small">Sacred Valley & Inca trails.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Cusco. Acclimatize to the altitude and explore the historic city center, including the Plaza de Armas and Sacsayhuaman ruins. Evening briefing on the trek. Day 2: Train to Ollantaytambo, then hike to Aguas Calientes. Visit the Sacred Valley en route. Overnight in Aguas Calientes. Day 3: Early morning bus to Machu Picchu. Guided tour of the ancient Inca citadel, exploring temples, terraces, and astronomical sites. Afternoon free to explore. Day 4: Optional hike to Huayna Picchu for panoramic views. Return to Aguas Calientes for relaxation. Day 5: Hike the Inca Trail sections or visit local markets. Cultural insights into Inca history. Day 6: Morning at leisure in Aguas Calientes. Train back to Cusco and transfer to airport for departure."><img src="https://i.pinimg.com/1200x/74/f1/2b/74f12b1c569b9b7833cfb27ac13f5d0d.jpg" class="card-img-top" alt="Machu Picchu"><div class="card-body d-flex flex-column"><h5 class="card-title">Machu Picchu Trek — 6 days</h5><p class="text-muted small">Sacred Valley & Inca trails.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/bf/dc/93/bfdc93e265dc102c9e1a0834b6e3728c.jpg" class="card-img-top" alt="Rio"><div class="card-body d-flex flex-column"><h5 class="card-title">Rio & Carnival Flavour — 5 days</h5><p class="text-muted small">Beaches, Christ the Redeemer & samba.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $899</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Rio de Janeiro. Transfer to hotel in Copacabana. Relax on the famous beach and enjoy the vibrant atmosphere. Evening welcome dinner with Brazilian specialties. Day 2: Visit to Christ the Redeemer statue on Corcovado Mountain. Cable car ride and panoramic views of the city. Afternoon at leisure on Copacabana Beach. Day 3: Explore Sugarloaf Mountain with cable car and hiking options. Visit the historic center and learn about Rio's colonial past. Evening samba show in Lapa district. Day 4: Full day excursion to Tijuca Forest for hiking and waterfalls. Visit the Botanical Gardens. Farewell dinner with live music. Day 5: Morning free for shopping or beach time. Transfer to airport for departure."><img src="https://i.pinimg.com/736x/bf/dc/93/bfdc93e265dc102c9e1a0834b6e3728c.jpg" class="card-img-top" alt="Rio"><div class="card-body d-flex flex-column"><h5 class="card-title">Rio & Carnival Flavour — 5 days</h5><p class="text-muted small">Beaches, Christ the Redeemer & samba.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $899</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/e6/e0/32/e6e032961912e1cf0f362096069b80ab.jpg" class="card-img-top" alt="Buenos Aires"><div class="card-body d-flex flex-column"><h5 class="card-title">Buenos Aires & Tango — 4 days</h5><p class="text-muted small">Historic neighborhoods and tango shows.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $749</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Buenos Aires. Transfer to hotel in Palermo district. Explore the vibrant neighborhood, visit the Botanical Gardens, and enjoy a welcome dinner with Argentine specialties. Evening free to settle in. Day 2: Morning visit to La Boca neighborhood, famous for its colorful houses and tango origins. Afternoon at Plaza de Mayo and Casa Rosada. Evening tango show with dinner in San Telmo. Day 3: Full day in Recoleta – visit the famous cemetery, explore the neighborhood's cafes and shops. Afternoon at leisure or optional shopping. Farewell dinner featuring traditional Argentine barbecue. Day 4: Morning free for personal exploration or shopping. Transfer to airport for departure."><img src="https://i.pinimg.com/736x/e6/e0/32/e6e032961912e1cf0f362096069b80ab.jpg" class="card-img-top" alt="Buenos Aires"><div class="card-body d-flex flex-column"><h5 class="card-title">Buenos Aires & Tango — 4 days</h5><p class="text-muted small">Historic neighborhoods and tango shows.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $749</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/38/87/12/388712755dbec51b36ff0d9c8613687f.jpg" class="card-img-top" alt="Santiago"><div class="card-body d-flex flex-column"><h5 class="card-title">Santiago & Wine Valleys — 4 days</h5><p class="text-muted small">City culture and nearby vineyards.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Santiago. Transfer to hotel in the city center. Explore Plaza de Armas and the historic district. Visit La Chascona, Pablo Neruda's colorful home. Evening welcome dinner with Chilean specialties. Day 2: Full day excursion to the Maipo Valley wine region. Visit renowned vineyards for guided tours and wine tastings. Enjoy a gourmet lunch paired with local wines. Return to Santiago in the evening. Day 3: Morning visit to Cajón del Maipo for scenic hikes or optional rafting. Afternoon free in Santiago – visit the Museum of Memory and Human Rights or shop in local markets. Farewell dinner featuring Chilean barbecue. Day 4: Morning free for personal exploration or optional day trip to Valparaíso. Transfer to airport for departure."><img src="https://i.pinimg.com/1200x/38/87/12/388712755dbec51b36ff0d9c8613687f.jpg" class="card-img-top" alt="Santiago"><div class="card-body d-flex flex-column"><h5 class="card-title">Santiago & Wine Valleys — 4 days</h5><p class="text-muted small">City culture and nearby vineyards.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $699</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/0b/51/41/0b514194d8d8bbea719019d8b5ddcfbd.jpg" class="card-img-top" alt="Cartagena"><div class="card-body d-flex flex-column"><h5 class="card-title">Cartagena & Colonial Streets — 4 days</h5><p class="text-muted small">Colorful streets and coastal charm.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $649</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm" data-itinerary="Day 1: Arrival in Cartagena. Transfer to hotel in the historic walled city. Explore the colorful streets of the old town, visit the Clock Tower and Plaza de la Aduana. Evening free to enjoy the vibrant atmosphere. Day 2: Full day excursion to the Rosario Islands for snorkeling and beach time. Relax on pristine beaches and swim in turquoise waters. Return to Cartagena in the evening. Day 3: Visit the Castillo de San Felipe de Barajas, a historic fortress with stunning views. Afternoon at leisure or optional boat tour in the bay. Evening farewell dinner with Colombian specialties. Day 4: Morning free for shopping or last-minute exploration. Transfer to airport for departure."><img src="https://i.pinimg.com/1200x/0b/51/41/0b514194d8d8bbea719019d8b5ddcfbd.jpg" class="card-img-top" alt="Cartagena"><div class="card-body d-flex flex-column"><h5 class="card-title">Cartagena & Colonial Streets — 4 days</h5><p class="text-muted small">Colorful streets and coastal charm.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $649</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/736x/44/86/74/44867470c173b75ccb1bcfd74f6e6e1a.jpg" class="card-img-top" alt="Patagonia"><div class="card-body d-flex flex-column"><h5 class="card-title">Patagonia Wilderness — 8 days</h5><p class="text-muted small">Glaciers, hikes and wild landscapes.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $1499</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
         <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="card h-100 shadow-sm"><img src="https://i.pinimg.com/1200x/a8/0c/20/a80c20affc05a31ec48d6d996ce7f398.jpg" class="card-img-top" alt="Galapagos"><div class="card-body d-flex flex-column"><h5 class="card-title">Galapagos Wildlife Cruise — 7 days</h5><p class="text-muted small">Unique wildlife and marine life.</p><div class="mt-auto d-flex justify-content-between align-items-center"><div class="badge-price">From $2199</div><a class="btn btn-sm btn-primary" href="#">Details</a></div></div></div></div>
 
@@ -299,6 +283,9 @@
       </div>
     </div>
   </footer>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -372,7 +359,30 @@
           <h4 id="modalTitle"></h4>
           <p id="modalDescription"></p>
           <div class="badge-price" id="modalPrice"></div>
-          <button id="downloadPdfBtn" class="btn btn-primary mt-3">Download Itinerary as PDF</button>
+          <div class="d-flex gap-2 mt-3">
+            <button id="downloadPdfBtn" class="btn btn-outline-primary">Download Itinerary as PDF</button>
+            <button id="addToCartBtn" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItems">
+            <p>Your cart is empty.</p>
+          </div>
+          <div class="mt-3">
+            <button id="orderNowBtn" class="btn btn-primary" disabled>Order Now</button>
+          </div>
         </div>
       </div>
     </div>
